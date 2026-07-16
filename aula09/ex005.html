@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 name="pao">Iniciando estudos DOM</h1>
+    <p class="sim">Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <h2 id="teste">teste</h2>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' +  p1.innerText)
+        corpo.style.backgroundColor = 'black'
+        p1.style.color = 'blue'
+        document.write(p1.innerHTML)
+        // innerText pega somente o texto, já innerHTML pegas as configurações
+        var d = window.document.getElementById('msg')
+        d.style.backgroundColor = 'green'
+        d.innerText = 'Estou aguardando...'
+        var i = window.document.getElementsByName('pao')[0]
+        i.style.backgroundColor = 'red'
+        var sim = document.getElementsByClassName('sim')[0]
+        sim.style.backgroundColor = '#00ff00'
+        var teste = document.querySelector('h2#teste')
+        teste.style.backgroundColor = '#233390'
+    </script>
+</body>
+</html>
