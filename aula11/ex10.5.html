@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro?</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <label for="nac">Digite o seu país de origem[ex:Brasil]:</label>
+        <input type="text" name="nac" id="nac">
+        <input type="button" value="Verificar" onclick="ver()">
+        <div id="res"></div>
+        <script>
+            function ver() {
+                var pais = document.querySelector('input#nac').value.trim().toUpperCase();
+                var res = document.querySelector('div#res');
+                
+                if (pais === 'BRASIL') {
+                    res.innerHTML = 'Você é <strong>Brasileiro</strong>!';
+                } else {
+                    res.innerHTML = 'Você é <strong>Estrangeiro</strong>!';
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>
